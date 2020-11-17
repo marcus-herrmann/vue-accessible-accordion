@@ -10,8 +10,8 @@
           {{ item.title }}
         </template>
 
-        <template v-for="item in accordionData" v-slot:[item.slug]>
-          <div v-html="item.body" :key="item.id" :id="item.slug" />
+        <template v-for="item in accordionData" :key="item.id" v-slot:[item.slug]>
+          <div v-html="item.body"  :id="item.slug" />
         </template>
       </accordion-list>
     </section>
@@ -24,8 +24,8 @@
           {{ item.title }}
         </template>
 
-        <template v-for="item in accordionData" v-slot:[item.slug]>
-          <div v-html="item.body" :key="item.id" :id="item.slug" />
+        <template v-for="item in accordionData" :key="item.id" v-slot:[item.slug]>
+          <div v-html="item.body"  :id="item.slug" />
         </template>
       </accordion-list>
     </section>
@@ -78,15 +78,15 @@ export default {
   body {
     background-color: #EFF1F0
   }
-  
+
   .example {
     margin-bottom: 64px;
   }
 
   .accordion-list {
     font-family: Helvetica, Arial, sans-serif;
-    box-shadow: 
-      0 1px 10px rgba(0, 0, 0, 0.2), 
+    box-shadow:
+      0 1px 10px rgba(0, 0, 0, 0.2),
       0 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   }
